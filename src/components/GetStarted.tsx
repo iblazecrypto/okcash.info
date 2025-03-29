@@ -87,11 +87,11 @@ const GetStarted = () => {
       recommendations: {
         title: "Recommended Wallets:",
         items: [
-          "OneKey Hardware Wallet - All networks, trusted by millions",
-          "Trust Wallet - Ethereum, BSC, Polygon, Avalanche",
-          "MetaMask - Ethereum and EVM-compatible networks",
-          "Coinbase Wallet - Ethereum, Polygon",
-          "Phantom Wallet - Solana network"
+          <a href="https://okcash.network/onekey/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">OneKey Hardware Wallet - All networks, trusted by millions</a>,
+          <a href="https://trustwallet.com/download" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">Trust Wallet - Ethereum, BSC, Polygon, Avalanche</a>,
+          <a href="https://metamask.io/download/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">MetaMask - Ethereum and EVM-compatible networks</a>,
+          <a href="https://www.coinbase.com/wallet" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">Coinbase Wallet - Ethereum, Polygon</a>,
+          <a href="https://phantom.com/download" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">Phantom Wallet - Solana network</a>
         ]
       }
     },
