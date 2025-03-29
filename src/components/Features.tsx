@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Globe, Leaf, Users, Shield, ArrowRight } from 'lucide-react';
 
 const Features = () => {
@@ -71,10 +72,10 @@ const Features = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <a href="#technical" className="inline-flex items-center text-green-600 hover:text-green-700">
+          <Link to="/ecosystem#technical" className="inline-flex items-center text-green-600 hover:text-green-700">
             <span>Learn about our technical infrastructure</span>
             <ArrowRight className="h-5 w-5 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

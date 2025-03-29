@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, Users } from 'lucide-react';
 
 const Hero = () => {
@@ -21,17 +22,35 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto">
             OK is the market symbol for Okcash, a decentralized cryptocurrency born on November 24, 2014. Simple to use, efficient, and sustainable, OK Token enables developers to expand their services while providing more value to users across 9+ blockchains.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
-            <button className="hero-button flex items-center justify-center space-x-2 w-full">
-              <span>Get started with OK</span>
-              <ArrowRight className="h-5 w-5" />
-            </button>
-            <button className="bg-white/10 backdrop-blur-lg border border-white/10 px-8 py-3 rounded-full text-white hover:bg-white/20 transition-all duration-300 w-full">
-              <span>Choose your wallet</span>
-            </button>
-            <button className="bg-white/10 backdrop-blur-lg border border-white/10 px-8 py-3 rounded-full text-white hover:bg-white/20 transition-all duration-300 w-full">
-              <span>Buy OK</span>
-            </button>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+            <Link 
+              to="/get-started" 
+              className="hero-button flex items-center justify-center space-x-2 w-full group relative overflow-hidden"
+            >
+              <span className="relative z-10">Get started with OK</span>
+              <ArrowRight className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Link>
+            <a 
+              href="https://okcash.network#wallets"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="relative group overflow-hidden bg-white/10 backdrop-blur-lg border border-white/20 px-8 py-3 rounded-full text-white hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center space-x-2"
+            >
+              <span className="relative z-10">Choose your wallet</span>
+              <ArrowRight className="h-5 w-5 relative z-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+            </a>
+            <a 
+              href="https://okcash.network#exchanges"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group overflow-hidden bg-white/10 backdrop-blur-lg border border-white/20 px-8 py-3 rounded-full text-white hover:bg-white/20 transition-all duration-300 w-full flex items-center justify-center space-x-2"
+            >
+              <span className="relative z-10">Buy OK</span>
+              <ArrowRight className="h-5 w-5 relative z-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+            </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="flex flex-col items-center p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">

@@ -21,12 +21,15 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore the OK Universe</h2>
+            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 mb-6">
+              Explore the OK Universe
+            </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Discover all aspects of the OK ecosystem and join our mission to revolutionize digital finance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-accent-500/5 to-primary-500/5 blur-3xl -z-10"></div>
             <Link 
               to="/ecosystem" 
               className="premium-card group"
@@ -34,12 +37,15 @@ const Home = () => {
               <div className="premium-icon inline-block mb-6">
                 <Globe className="h-8 w-8 text-primary-600 relative z-10" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-all duration-500">
                 Ecosystem
               </h3>
-              <p className="text-gray-600 group-hover:text-gray-900 transition-colors">
+              <p className="text-gray-600 group-hover:text-gray-900 transition-all duration-500">
                 Explore OK's multichain universe across 9+ major blockchains.
               </p>
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500">
+                <ArrowRight className="h-5 w-5 text-primary-600" />
+              </div>
             </Link>
             
             <Link 
@@ -119,7 +125,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="h-24 bg-gradient-to-b from-gray-50 to-white"></div>
+      <div className="h-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-conic from-primary-500/5 via-transparent to-accent-500/5 animate-spin-slow"></div>
+      </div>
     </>
   );
 };
